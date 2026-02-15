@@ -9,6 +9,7 @@ Public marketplace for Claude plugins by [Sabai System](https://sabaisystem.com)
 | [sabai-sudoku](plugins/sabai-sudoku) | Interactive Sudoku game with smart hints | MCP App |
 | [sabai-pm-linear](plugins/sabai-pm-linear) | Product Manager assistant with Linear integration | Skills + Commands |
 | [sabai-crm-attio](plugins/sabai-crm-attio) | CRM assistant with Attio integration | Skills + Commands |
+| [sabai-conversion](plugins/sabai-conversion) | Smart currency and timezone converter with preferences | Skills |
 | [sabai-doc-notion](plugins/sabai-doc-notion) | Documentation workflow with Notion integration | MCP + Skills + Commands |
 | [sabai-gmail](plugins/sabai-gmail) | Gmail assistant for email composition and inbox management | Skills + Commands |
 | [sabai-calendar](plugins/sabai-calendar) | Calendar assistant with Google Calendar integration | Skills + Commands |
@@ -16,6 +17,7 @@ Public marketplace for Claude plugins by [Sabai System](https://sabaisystem.com)
 | [sabai-video-tella](plugins/sabai-video-tella) | Tella video management and content planning | MCP + Commands |
 | [sabai-timesheet-harvest](plugins/sabai-timesheet-harvest) | Efficient Harvest time tracking for employees/contractors | Skills + Commands |
 | [sabai-discord](plugins/sabai-discord) | Discord assistant for server management and messaging | Skills + Commands |
+| [sabai-slack](plugins/sabai-slack) | Full-featured Slack integration for messaging and search | MCP + Skills + Commands |
 
 ## Installation
 
