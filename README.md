@@ -10,6 +10,9 @@ Public marketplace for Claude plugins by [Sabai System](https://sabaisystem.com)
 | [sabai-pm-linear](plugins/sabai-pm-linear) | Product Manager assistant with Linear integration | Skills + Commands |
 | [sabai-crm-attio](plugins/sabai-crm-attio) | CRM assistant with Attio integration | Skills + Commands |
 | [sabai-doc-notion](plugins/sabai-doc-notion) | Documentation workflow with Notion integration | MCP + Skills + Commands |
+| [sabai-gmail](plugins/sabai-gmail) | Gmail assistant for email composition and inbox management | Skills + Commands |
+| [sabai-calendar](plugins/sabai-calendar) | Calendar assistant with Google Calendar integration | Skills + Commands |
+| [sabai-sabai](plugins/sabai-sabai) | Relax with chill Thai vibes when you need a break | MCP App + Command |
 
 ## Installation
 

@@ -1,0 +1,19 @@
+{
+  "name": "sabai-sabai-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "tsx server.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "^0.3.1",
+    "@modelcontextprotocol/sdk": "^1.11.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-singlefile": "^2.1.0"
+  }
+}

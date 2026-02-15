@@ -1,0 +1,12 @@
+{
+  "name": "sabai-sabai",
+  "description": "Relax with some Thai vibes - plays a chill video when you need a break",
+  "version": "1.0.0",
+  "author": "Sabai System",
+  "mcp": {
+    "command": "npx",
+    "args": ["tsx", "mcp/server.ts"],
+    "cwd": "plugins/sabai-sabai"
+  },
+  "commands": ["commands/sabai.md"]
+}
