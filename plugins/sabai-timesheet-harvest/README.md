@@ -4,6 +4,7 @@ Efficient Harvest time tracking for employees and contractors using the [hrvst-c
 
 ## Features
 
+- Duplicate last week's timesheet with review before submitting
 - Quick time logging with aliases
 - Weekly timesheet review and gap detection
 - Auto-install of Harvest CLI
@@ -29,10 +30,19 @@ Then run `/setup-harvest` to install the CLI and configure your account.
 | Command | Description |
 |---------|-------------|
 | `/setup-harvest` | Install CLI, authenticate, and create aliases |
+| `/duplicate-week` | Copy last week's entries with review before submitting |
 | `/log [hours] [project]` | Quick time entry |
 | `/timesheet [day\|week]` | View your timesheet |
 
 ## Usage Examples
+
+### Duplicate Last Week
+
+```
+/duplicate-week
+```
+
+This shows last week's entries, lets you adjust hours/projects/notes, and only submits after you confirm.
 
 ### Quick Logging
 
