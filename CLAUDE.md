@@ -32,6 +32,29 @@ When creating a new plugin:
 3. **Add README.md** documenting what the plugin does and how to use it
 4. **Build and test** before committing
 5. **Update the main README.md** to list the new plugin
+6. **Add to marketplace.json** (see below)
+
+## Marketplace Configuration
+
+The marketplace is defined in `.claude-plugin/marketplace.json`. When adding a new plugin, add an entry:
+
+```json
+{
+  "name": "sabai-claude-marketplace",
+  "owner": {
+    "name": "Sabai System"
+  },
+  "plugins": [
+    {
+      "name": "plugin-name",
+      "source": "./plugins/plugin-name",
+      "description": "What your plugin does."
+    }
+  ]
+}
+```
+
+**Important:** This format is required for Claude for Work compatibility. Do not add extra fields like `id`, `version`, `category`, or `tags` - only `name`, `source`, and `description`.
 
 ## MCP App Plugins
 

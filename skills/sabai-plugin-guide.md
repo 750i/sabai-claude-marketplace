@@ -47,6 +47,20 @@ plugins/
 }
 ```
 
+## Marketplace Registration (Required)
+
+Every plugin must be added to `.claude-plugin/marketplace.json` for Claude for Work compatibility:
+
+```json
+{
+  "name": "plugin-name",
+  "source": "./plugins/plugin-name",
+  "description": "What your plugin does."
+}
+```
+
+**Important:** Only use `name`, `source`, and `description` fields. Do not add `id`, `version`, `category`, or `tags` - the Claude for Work format is simpler than Claude Code.
+
 ## MCP Apps (Interactive UIs)
 
 ### Required Setup
@@ -285,6 +299,7 @@ This is a PUBLIC repository. NEVER include:
 - [ ] **NO SENSITIVE DATA** in any file (code, config, docs, comments)
 - [ ] Plugin follows the standard structure
 - [ ] `plugin.json` manifest is complete
+- [ ] Plugin added to `.claude-plugin/marketplace.json`
 - [ ] Plugin `README.md` documents usage accurately
 - [ ] Main `README.md` lists the plugin in the table
 - [ ] MCP server has `startup.sh`

@@ -21,31 +21,42 @@ Public marketplace for Claude plugins by [Sabai System](https://sabaisystem.com)
 
 ## Installation
 
-### Prerequisites
+### Claude for Work (Recommended)
 
-- [Claude Desktop](https://claude.ai/download) or Claude Code CLI
-- Node.js 18+ (for MCP servers)
+The easiest way to install plugins is through Claude for Work:
 
-### Install a Plugin
+1. Open Claude for Work
+2. Go to **Plugins** > **Browse plugins** > **Manage**
+3. Click **Add marketplace from GitHub**
+4. Enter: `sabaisystem/sabai-claude-marketplace`
+5. Click **Sync**
+6. Install any plugin from the marketplace
+
+### Claude Code CLI
+
+Add the marketplace and install plugins via CLI:
+
+```bash
+claude plugin marketplace add sabaisystem/sabai-claude-marketplace
+claude plugin install sabai-sudoku@sabai-claude-marketplace
+```
+
+### Manual Installation (Claude Desktop)
+
+For Claude Desktop or manual setup:
 
 1. Clone this repository:
    ```bash
    git clone https://github.com/sabaisystem/sabai-claude-marketplace.git
    ```
 
-2. Navigate to the plugin you want to install:
+2. Navigate to the plugin and install dependencies:
    ```bash
    cd sabai-claude-marketplace/plugins/sabai-sudoku/mcp
-   ```
-
-3. Install dependencies:
-   ```bash
    npm install
    ```
 
-4. Add the plugin to your Claude configuration:
-
-   **For Claude Desktop** (`~/Library/Application Support/Claude/claude_desktop_config.json`):
+3. Add to Claude Desktop config (`~/Library/Application Support/Claude/claude_desktop_config.json`):
    ```json
    {
      "mcpServers": {
@@ -57,19 +68,7 @@ Public marketplace for Claude plugins by [Sabai System](https://sabaisystem.com)
    }
    ```
 
-   **For Claude Code** (`.claude/settings.local.json` in your project):
-   ```json
-   {
-     "mcpServers": {
-       "sabai-sudoku": {
-         "command": "bash",
-         "args": ["/path/to/sabai-claude-marketplace/plugins/sabai-sudoku/mcp/startup.sh"]
-       }
-     }
-   }
-   ```
-
-5. Restart Claude Desktop or Claude Code
+4. Restart Claude Desktop
 
 ## Plugin Structure
 
