@@ -2,7 +2,6 @@ import { useApp, useHostStyles } from "@modelcontextprotocol/ext-apps/react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-// Import the uncompressed video
 import sabaiVideo from "./sabai.mp4";
 
 const SABAI_URL = "https://sabaisystem.com";
@@ -23,49 +22,33 @@ function SabaiApp() {
     window.open(SABAI_URL, "_blank");
   };
 
-  if (error) return <div style={{ color: "red", padding: 20 }}>Error: {error.message}</div>;
-  if (!app) return <div style={{ padding: 20 }}>Connecting...</div>;
+  if (error || !app) return null;
 
   return (
     <main style={{
       margin: 0,
       padding: 0,
-      fontFamily: "system-ui, -apple-system, sans-serif",
       background: "transparent",
-      color: "white",
       width: "100%",
       height: "100vh",
       overflow: "hidden",
-      display: "flex",
-      flexDirection: "column",
       position: "relative",
     }}>
-      {/* Video Container - full size */}
-      <div style={{
-        flex: 1,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        overflow: "hidden",
-      }}>
-        <video
-          src={sabaiVideo}
-          controls
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "contain",
-          }}
-        >
-          Your browser does not support the video tag.
-        </video>
-      </div>
+      <video
+        src={sabaiVideo}
+        controls
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "contain",
+        }}
+      />
 
-      {/* Footer with Sabai System logo - bottom right */}
+      {/* Attribution - bottom right */}
       <div style={{
         position: "absolute",
         bottom: "12px",
@@ -75,10 +58,11 @@ function SabaiApp() {
         gap: "6px",
         cursor: "pointer",
         opacity: 0.7,
-        transition: "opacity 0.2s",
         background: "rgba(0,0,0,0.5)",
         padding: "6px 10px",
         borderRadius: "6px",
+        color: "white",
+        fontFamily: "system-ui, -apple-system, sans-serif",
       }} onClick={openSabai}>
         <span style={{ fontSize: "0.75rem" }}>Made by</span>
         <svg width="20" height="20" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
