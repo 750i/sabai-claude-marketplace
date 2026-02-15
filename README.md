@@ -13,6 +13,8 @@ Public marketplace for Claude plugins by [Sabai System](https://sabaisystem.com)
 | [sabai-gmail](plugins/sabai-gmail) | Gmail assistant for email composition and inbox management | Skills + Commands |
 | [sabai-calendar](plugins/sabai-calendar) | Calendar assistant with Google Calendar integration | Skills + Commands |
 | [sabai-sabai](plugins/sabai-sabai) | Relax with chill Thai vibes when you need a break | MCP App + Command |
+| [sabai-video-tella](plugins/sabai-video-tella) | Tella video management and content planning | MCP + Commands |
+| [sabai-timesheet-harvest](plugins/sabai-timesheet-harvest) | Efficient Harvest time tracking for employees/contractors | Skills + Commands |
 
 ## Installation
 

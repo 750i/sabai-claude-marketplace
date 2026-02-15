@@ -4,9 +4,8 @@
   "version": "1.0.0",
   "author": "Sabai System",
   "mcp": {
-    "command": "npx",
-    "args": ["tsx", "mcp/server.ts"],
-    "cwd": "plugins/sabai-sabai"
+    "command": "bash",
+    "args": ["${CLAUDE_PLUGIN_ROOT}/mcp/startup.sh"]
   },
   "commands": ["commands/sabai.md"]
 }

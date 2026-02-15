@@ -1,0 +1,21 @@
+{
+  "name": "sabai-video-tella",
+  "version": "1.0.0",
+  "description": "Tella video workflow assistant with MCP integration for managing videos, playlists, and creating async video content",
+  "author": "Sabai System",
+  "homepage": "https://sabaisystem.com",
+  "repository": "https://github.com/sabai-system/sabai-claude-marketplace",
+  "mcpServers": {
+    "tella": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://api.tella.com/mcp"]
+    }
+  },
+  "commands": [
+    {
+      "name": "tella",
+      "description": "Plan and prepare Tella video content",
+      "file": "commands/tella.md"
+    }
+  ]
+}
