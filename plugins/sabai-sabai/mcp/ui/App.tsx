@@ -1,10 +1,14 @@
 import { useApp, useHostStyles } from "@modelcontextprotocol/ext-apps/react";
-import { StrictMode } from "react";
+import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 
 import sabaiVideo from "./sabai.mp4";
 
 const SABAI_URL = "https://sabaisystem.com";
+
+// Target dimensions for the video player
+const APP_WIDTH = 640;
+const APP_HEIGHT = 420; // 16:9 ratio + space for attribution
 
 function SabaiApp() {
   const { app, error } = useApp({
@@ -18,6 +22,13 @@ function SabaiApp() {
 
   useHostStyles(app);
 
+  // Request the size we need from the host
+  useEffect(() => {
+    if (app) {
+      app.sendSizeChanged({ width: APP_WIDTH, height: APP_HEIGHT });
+    }
+  }, [app]);
+
   const openSabai = () => {
     window.open(SABAI_URL, "_blank");
   };
@@ -30,7 +41,8 @@ function SabaiApp() {
       padding: "12px",
       background: "transparent",
       fontFamily: "system-ui, -apple-system, sans-serif",
-      height: "100vh",
+      width: APP_WIDTH,
+      height: APP_HEIGHT,
       boxSizing: "border-box",
       display: "flex",
       flexDirection: "column",

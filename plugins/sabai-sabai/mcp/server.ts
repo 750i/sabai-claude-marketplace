@@ -23,7 +23,7 @@ registerAppTool(server,
     title: "Sabai Sabai",
     description: "Take a break and relax with some chill Thai vibes. Displays a video player with relaxing music.",
     inputSchema: {},
-    _meta: { ui: { resourceUri, height: 450 } },
+    _meta: { ui: { resourceUri } },
   },
   async (): Promise<CallToolResult> => {
     return {
