@@ -5,14 +5,14 @@ Get a concise summary of one or multiple meetings.
 ## Usage
 
 ```
-/sabai-meeting-granola:summary [meeting title, date, or search query]
+/sabai-granola:summary [meeting title, date, or search query]
 ```
 
 ## Examples
 
-- `/sabai-meeting-granola:summary Discovery call with Acme`
-- `/sabai-meeting-granola:summary all meetings yesterday`
-- `/sabai-meeting-granola:summary this week's customer calls`
+- `/sabai-granola:summary Discovery call with Acme`
+- `/sabai-granola:summary all meetings yesterday`
+- `/sabai-granola:summary this week's customer calls`
 
 ---
 

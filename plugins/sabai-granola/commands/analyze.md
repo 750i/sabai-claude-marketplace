@@ -5,15 +5,15 @@ Automatically detect meeting type and run appropriate analysis framework.
 ## Usage
 
 ```
-/sabai-meeting-granola:analyze [meeting title or search query]
+/sabai-granola:analyze [meeting title or search query]
 ```
 
 ## Examples
 
-- `/sabai-meeting-granola:analyze Discovery call with Acme Corp`
-- `/sabai-meeting-granola:analyze Interview with Sarah for PM role`
-- `/sabai-meeting-granola:analyze Today's standup`
-- `/sabai-meeting-granola:analyze Steering committee Q1`
+- `/sabai-granola:analyze Discovery call with Acme Corp`
+- `/sabai-granola:analyze Interview with Sarah for PM role`
+- `/sabai-granola:analyze Today's standup`
+- `/sabai-granola:analyze Steering committee Q1`
 
 ---
 

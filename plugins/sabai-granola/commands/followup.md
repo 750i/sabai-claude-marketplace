@@ -5,15 +5,15 @@ Generate a professional follow-up email based on meeting content.
 ## Usage
 
 ```
-/sabai-meeting-granola:followup [meeting title or search]
+/sabai-granola:followup [meeting title or search]
 ```
 
 ## Examples
 
-- `/sabai-meeting-granola:followup Discovery call with Acme`
-- `/sabai-meeting-granola:followup last meeting with John`
-- `/sabai-meeting-granola:followup Interview with Sarah`
-- `/sabai-meeting-granola:followup today's steerco`
+- `/sabai-granola:followup Discovery call with Acme`
+- `/sabai-granola:followup last meeting with John`
+- `/sabai-granola:followup Interview with Sarah`
+- `/sabai-granola:followup today's steerco`
 
 ---
 

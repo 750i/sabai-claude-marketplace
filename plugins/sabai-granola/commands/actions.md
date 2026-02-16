@@ -5,17 +5,17 @@ Extract and track action items from your meetings.
 ## Usage
 
 ```
-/sabai-meeting-granola:actions [timeframe or filter]
+/sabai-granola:actions [timeframe or filter]
 ```
 
 ## Examples
 
-- `/sabai-meeting-granola:actions` (from recent meetings)
-- `/sabai-meeting-granola:actions this week`
-- `/sabai-meeting-granola:actions last 7 days`
-- `/sabai-meeting-granola:actions my items` (only items assigned to me)
-- `/sabai-meeting-granola:actions for John` (items assigned to John)
-- `/sabai-meeting-granola:actions overdue`
+- `/sabai-granola:actions` (from recent meetings)
+- `/sabai-granola:actions this week`
+- `/sabai-granola:actions last 7 days`
+- `/sabai-granola:actions my items` (only items assigned to me)
+- `/sabai-granola:actions for John` (items assigned to John)
+- `/sabai-granola:actions overdue`
 
 ---
 

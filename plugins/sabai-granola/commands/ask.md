@@ -5,15 +5,15 @@ Ask natural language questions about your meetings and get answers with context.
 ## Usage
 
 ```
-/sabai-meeting-granola:ask [your question]
+/sabai-granola:ask [your question]
 ```
 
 ## Examples
 
-- `/sabai-meeting-granola:ask What did John say about the budget?`
-- `/sabai-meeting-granola:ask When did we last discuss the API redesign?`
-- `/sabai-meeting-granola:ask What objections has Acme raised?`
-- `/sabai-meeting-granola:ask What did I commit to this week?`
+- `/sabai-granola:ask What did John say about the budget?`
+- `/sabai-granola:ask When did we last discuss the API redesign?`
+- `/sabai-granola:ask What objections has Acme raised?`
+- `/sabai-granola:ask What did I commit to this week?`
 
 ---
 

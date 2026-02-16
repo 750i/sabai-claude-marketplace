@@ -5,15 +5,15 @@ List upcoming meetings with context from previous interactions.
 ## Usage
 
 ```
-/sabai-meeting-granola:next [timeframe]
+/sabai-granola:next [timeframe]
 ```
 
 ## Examples
 
-- `/sabai-meeting-granola:next` (today's remaining meetings)
-- `/sabai-meeting-granola:next today`
-- `/sabai-meeting-granola:next tomorrow`
-- `/sabai-meeting-granola:next this week`
+- `/sabai-granola:next` (today's remaining meetings)
+- `/sabai-granola:next today`
+- `/sabai-granola:next tomorrow`
+- `/sabai-granola:next this week`
 
 ---
 

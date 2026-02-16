@@ -13,7 +13,7 @@ Public marketplace for Claude plugins by [Sabai System](https://sabaisystem.com)
 | [sabai-doc-notion](plugins/sabai-doc-notion) | Documentation workflow with Notion integration | MCP + Skills + Commands | 1.0.0 | Active | 2026-02-16 |
 | [sabai-gmail](plugins/sabai-gmail) | Gmail assistant for email composition and inbox management | Skills + Commands | 1.0.0 | Active | 2026-02-16 |
 | [sabai-calendar](plugins/sabai-calendar) | Calendar assistant with Google Calendar integration | Skills + Commands | 1.0.0 | Active | 2026-02-16 |
-| [sabai-meeting-granola](plugins/sabai-meeting-granola) | Meeting intelligence with Granola for summaries and coaching | Skills + Commands | 1.0.0 | Active | 2026-02-16 |
+| [sabai-granola](plugins/sabai-granola) | Meeting intelligence with Granola for summaries and coaching | MCP + Commands | 1.2.0 | Active | 2026-02-17 |
 | [sabai-sabai](plugins/sabai-sabai) | Relax with chill Thai vibes when you need a break | MCP App + Command | 1.0.0 | Active | 2026-02-16 |
 | [sabai-video-tella](plugins/sabai-video-tella) | Tella video management and content planning | MCP + Commands | 1.0.0 | Active | 2026-02-16 |
 | [sabai-timesheet-harvest](plugins/sabai-timesheet-harvest) | Efficient Harvest time tracking for employees/contractors | Skills + Commands | 1.0.0 | Active | 2026-02-16 |

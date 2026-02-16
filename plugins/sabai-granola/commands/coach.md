@@ -5,16 +5,16 @@ Holistic analysis of your work patterns, meeting behavior, communication style, 
 ## Usage
 
 ```
-/sabai-meeting-granola:coach [time period or focus area]
+/sabai-granola:coach [time period or focus area]
 ```
 
 ## Examples
 
-- `/sabai-meeting-granola:coach this week`
-- `/sabai-meeting-granola:coach last month`
-- `/sabai-meeting-granola:coach my sales calls`
-- `/sabai-meeting-granola:coach communication`
-- `/sabai-meeting-granola:coach time management`
+- `/sabai-granola:coach this week`
+- `/sabai-granola:coach last month`
+- `/sabai-granola:coach my sales calls`
+- `/sabai-granola:coach communication`
+- `/sabai-granola:coach time management`
 
 ---
 
