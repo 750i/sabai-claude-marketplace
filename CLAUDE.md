@@ -83,6 +83,54 @@ Include a footer link to sabaisystem.com when building MCP Apps.
 - Test plugins before committing
 - Keep dependencies minimal
 
+## Automatic Release Management (CRITICAL)
+
+When you modify any plugin code (not just docs), you MUST automatically:
+
+1. **Update CHANGELOG.md** in the plugin folder:
+   - Add a new version section at the top (below the header)
+   - Use today's date
+   - Categorize changes: Added, Changed, Fixed, Removed
+   - Keep entries concise but descriptive
+
+2. **Bump version in plugin.json**:
+   - Patch (1.0.x): Bug fixes, small changes
+   - Minor (1.x.0): New features, non-breaking changes
+   - Major (x.0.0): Breaking changes
+
+3. **Update README.md table**:
+   - Update the Version column
+   - Update the Updated column with today's date
+
+### Changelog Format
+
+```markdown
+## [1.1.0] - 2026-02-17
+
+### Added
+- New feature description
+
+### Changed
+- What was modified
+
+### Fixed
+- Bug that was fixed
+```
+
+### Example Workflow
+
+When fixing a bug in sabai-sudoku:
+1. Make the code fix
+2. Add to `plugins/sabai-sudoku/CHANGELOG.md`:
+   ```
+   ## [1.0.1] - 2026-02-17
+
+   ### Fixed
+   - Description of the bug fix
+   ```
+3. Update `plugins/sabai-sudoku/.claude-plugin/plugin.json` version to "1.0.1"
+4. Update main `README.md` table: version "1.0.1", updated "2026-02-17"
+
 ## Documentation Requirements (IMPORTANT)
 
 When creating or updating any plugin, ALWAYS ensure:

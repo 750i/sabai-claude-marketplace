@@ -294,14 +294,47 @@ This is a PUBLIC repository. NEVER include:
 - URLs containing auth tokens or private paths
 - Any data that shouldn't be public
 
+## Automatic Release Management
+
+When modifying plugin code, you MUST automatically update:
+
+1. **CHANGELOG.md** - Add new version entry with changes
+2. **plugin.json** - Bump version number
+3. **Main README.md** - Update version and date in table
+
+### Changelog Format
+
+```markdown
+## [1.1.0] - 2026-02-17
+
+### Added
+- New feature description
+
+### Changed
+- What was modified
+
+### Fixed
+- Bug that was fixed
+
+### Removed
+- What was removed
+```
+
+### Version Bumping
+
+- **Patch** (1.0.x): Bug fixes, small tweaks
+- **Minor** (1.x.0): New features, non-breaking changes
+- **Major** (x.0.0): Breaking changes
+
 ## Checklist Before Committing
 
 - [ ] **NO SENSITIVE DATA** in any file (code, config, docs, comments)
 - [ ] Plugin follows the standard structure
-- [ ] `plugin.json` manifest is complete
+- [ ] `plugin.json` manifest is complete (version bumped if code changed)
+- [ ] `CHANGELOG.md` updated with new version entry
 - [ ] Plugin added to `.claude-plugin/marketplace.json`
 - [ ] Plugin `README.md` documents usage accurately
-- [ ] Main `README.md` lists the plugin in the table
+- [ ] Main `README.md` table updated (version + date)
 - [ ] MCP server has `startup.sh`
 - [ ] Built `dist/` folder is committed (for MCP Apps)
 - [ ] Brand colors used appropriately
