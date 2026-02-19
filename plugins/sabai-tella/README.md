@@ -1,4 +1,4 @@
-# Sabai Video Tella Plugin
+# Sabai Tella
 
 A Claude plugin for managing Tella videos and playlists, planning video content, and creating scripts for async video communication.
 

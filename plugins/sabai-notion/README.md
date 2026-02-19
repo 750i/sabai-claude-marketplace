@@ -1,4 +1,4 @@
-# Sabai Doc Notion
+# Sabai Notion
 
 Documentation workflow plugin with Notion integration. Create, update, and sync documentation between your codebase and Notion pages.
 
@@ -26,7 +26,7 @@ Documentation workflow plugin with Notion integration. Create, update, and sync 
 
 2. Navigate to the plugin:
    ```bash
-   cd sabai-claude-marketplace/plugins/sabai-doc-notion/mcp
+   cd sabai-claude-marketplace/plugins/sabai-notion/mcp
    ```
 
 3. Install dependencies:
@@ -40,9 +40,9 @@ Documentation workflow plugin with Notion integration. Create, update, and sync 
    ```json
    {
      "mcpServers": {
-       "sabai-doc-notion": {
+       "sabai-notion": {
          "command": "bash",
-         "args": ["/path/to/plugins/sabai-doc-notion/mcp/startup.sh"],
+         "args": ["/path/to/plugins/sabai-notion/mcp/startup.sh"],
          "env": {
            "NOTION_API_KEY": "your-notion-integration-token"
          }
@@ -55,9 +55,9 @@ Documentation workflow plugin with Notion integration. Create, update, and sync 
    ```json
    {
      "mcpServers": {
-       "sabai-doc-notion": {
+       "sabai-notion": {
          "command": "bash",
-         "args": ["/path/to/plugins/sabai-doc-notion/mcp/startup.sh"],
+         "args": ["/path/to/plugins/sabai-notion/mcp/startup.sh"],
          "env": {
            "NOTION_API_KEY": "your-notion-integration-token"
          }

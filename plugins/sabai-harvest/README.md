@@ -1,4 +1,4 @@
-# Sabai Timesheet Harvest
+# Sabai Harvest
 
 Efficient Harvest time tracking for employees and contractors using the [hrvst-cli](https://github.com/kgajera/hrvst-cli).
 
@@ -20,7 +20,7 @@ Efficient Harvest time tracking for employees and contractors using the [hrvst-c
 Install the plugin in Claude Code:
 
 ```bash
-claude mcp add-plugin sabai-timesheet-harvest
+claude mcp add-plugin sabai-harvest
 ```
 
 Then run `/setup-harvest` to install the CLI and configure your account.

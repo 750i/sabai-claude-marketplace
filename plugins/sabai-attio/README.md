@@ -1,4 +1,4 @@
-# Sabai CRM Attio
+# Sabai Attio
 
 CRM assistant with Attio integration. Manage leads, prepare for meetings, track deals, and log activities in your Attio workspace using natural language.
 
