@@ -19,6 +19,28 @@ Linear MCP is configured in `.mcp.json` using the hosted endpoint with OAuth:
 
 On first use, a browser window will open for Linear OAuth authentication.
 
+## Ticket-First Workflow (CRITICAL)
+
+**NEVER start working on a plugin without a Linear ticket.**
+
+1. When asked to implement/fix/change something → check for existing ticket
+2. If no ticket → create one first, show to user
+3. Ask: "Is this clear? Edit / Start working / Leave for later"
+4. Only start work after user approval
+
+### Project Commands
+
+- `/todo <plugin> <description>` - Create a ticket and optionally start working
+- `/work-on <ticket-id>` - Work on an existing ticket (e.g., `/work-on SCM-27`)
+- `/work-on <plugin>` - List and work on tickets for a plugin
+
+### Ticket Links
+
+Always show both app and browser links:
+```
+[Open in app](linear://sabaisystem/issue/SCM-XX) | [Open in browser](https://linear.app/sabaisystem/issue/SCM-XX)
+```
+
 ## When to Use
 
 Use this skill when:
@@ -37,23 +59,23 @@ Use this skill when:
 
 Each plugin has a corresponding Linear project:
 
-| Project | Description |
-|---------|-------------|
-| Sabai Plugins | General/cross-plugin issues |
-| Sabai calendar | Google Calendar integration |
-| Sabai conversion | Currency/timezone converter |
-| Sabai crm attio | Attio CRM integration |
-| Sabai discord | Discord assistant |
-| Sabai gmail | Gmail assistant |
-| Sabai granola | Meeting intelligence (Granola) |
-| Sabai harvest | Harvest time tracking |
-| Sabai Linear | Linear PM assistant plugin |
-| Sabai Linear MCP | MCP integration for Linear |
-| Sabai notion | Notion documentation sync |
-| Sabai Sabai | Relaxation plugin |
-| Sabai slack | Slack integration |
-| Sabai sudoku | Sudoku game MCP App |
-| Sabai video tella | Tella video management |
+| Project | Plugin Folder | Description |
+|---------|---------------|-------------|
+| Sabai Plugins | - | General/cross-plugin issues |
+| Sabai Attio | sabai-attio | Attio CRM integration |
+| Sabai Calendar | sabai-calendar | Google Calendar integration |
+| Sabai Conversion | sabai-conversion | Currency/timezone converter |
+| Sabai Discord | sabai-discord | Discord assistant |
+| Sabai Gmail | sabai-gmail | Gmail assistant |
+| Sabai Granola | sabai-granola | Meeting intelligence (Granola) |
+| Sabai Harvest | sabai-harvest | Harvest time tracking |
+| Sabai Linear | sabai-linear | Linear PM assistant plugin |
+| Sabai Notion | sabai-notion | Notion documentation sync |
+| Sabai Recall | sabai-recall | Meeting bot automation |
+| Sabai Sabai | sabai-sabai | Relaxation plugin |
+| Sabai Slack | sabai-slack | Slack integration |
+| Sabai Sudoku | sabai-sudoku | Sudoku game MCP App |
+| Sabai Tella | sabai-tella | Tella video management |
 
 ### Workflow Statuses
 

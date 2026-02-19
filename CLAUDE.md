@@ -248,6 +248,84 @@ Follow conventional commit format:
 - `fix: Fix bug in plugin`
 - `docs: Update documentation`
 
+## Ticket-First Workflow (CRITICAL)
+
+**NEVER start working on a plugin without a Linear ticket.**
+
+When asked to implement, fix, or change anything in a plugin:
+
+### Step 1: Check for Existing Ticket
+
+1. Search Linear for an existing ticket matching the request
+2. If found, confirm with user: "I found ticket SCM-XX for this. Should I work on it?"
+
+### Step 2: Create Ticket if None Exists
+
+If no ticket exists:
+1. **Create the ticket first** using `mcp__linear__create_issue`
+2. Include: title, overview, requirements, acceptance criteria
+3. **Show the ticket to the user** with the Linear link
+4. **Ask for confirmation**: "Is this ticket clear? Would you like to edit it or should I start working?"
+
+### Step 3: Wait for Approval
+
+- If user wants edits → update the ticket, ask again
+- If user approves → change status to "In Progress" and start working
+- If user says "later" → leave ticket in backlog, don't start
+
+### Step 4: Work on the Ticket
+
+Only after user approval:
+1. Update ticket status to "In Progress"
+2. Implement the changes following the acceptance criteria
+3. Reference the ticket ID in commits (e.g., `feat: Add feature [SCM-28]`)
+4. When done, add a comment to the ticket summarizing what was done
+
+### Example Flow
+
+```
+User: I want the calendar plugin to find meeting slots
+
+Claude: Let me create a ticket for this feature.
+
+[Creates ticket SCM-29: "Smart Meeting Slot Finder" in Sabai Calendar project]
+
+Created: SCM-29 - Smart Meeting Slot Finder
+[Open in app](linear://sabaisystem/issue/SCM-29) | [Open in browser](https://linear.app/sabaisystem/issue/SCM-29)
+
+## Overview
+Implement a meeting slot finder that analyzes calendar availability...
+
+## Requirements
+- [ ] Analyze calendar for free slots
+- [ ] Respect working hours
+- [ ] Suggest ranked options
+
+Is this ticket clear? Would you like to:
+1. Edit the ticket
+2. Start working on it
+3. Leave it for later
+
+User: 2
+
+Claude: Starting work on SCM-29...
+[Updates status to In Progress]
+[Begins implementation]
+```
+
+### Ticket Links
+
+Always show both app and browser links when displaying tickets:
+```
+[Open in app](linear://sabaisystem/issue/SCM-XX) | [Open in browser](https://linear.app/sabaisystem/issue/SCM-XX)
+```
+
+### Commands
+
+- `/todo <plugin> <description>` - Create a ticket and optionally start working
+- `/work-on <ticket-id>` - Work on an existing ticket
+- `/work-on <plugin>` - List and work on tickets for a plugin
+
 ## Linear Project Management
 
 This repository is tracked in Linear under the **Sabai Claude Marketplace** team. Each plugin has a corresponding Linear project for issue tracking.

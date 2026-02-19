@@ -114,6 +114,14 @@ This repository is tracked in [Linear](https://linear.app/sabaisystem) under the
 - **General issues**: Use the "Sabai Plugins" project for cross-plugin concerns
 - **Workflow**: Triage → Backlog → Todo → In Progress → In Review → Done
 
+### Developer Commands
+
+When working on this repo with Claude Code:
+
+- `/todo <plugin> <description>` - Create a ticket for a plugin
+- `/work-on <ticket-id>` - Work on a specific ticket (e.g., `/work-on SCM-27`)
+- `/work-on <plugin>` - List and work on all tickets for a plugin
+
 ## Contributing
 
 We welcome contributions! To add a plugin:
