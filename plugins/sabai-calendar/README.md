@@ -5,7 +5,7 @@
 | Field | Value |
 |-------|-------|
 | Type | Skills + Commands |
-| Version | 1.0.0 |
+| Version | 1.3.0 |
 | Status | Active |
 | Command | `/today`, `/event`, `/schedule`, `/briefing` |
 | Repo | `plugins/sabai-calendar` |
@@ -21,6 +21,7 @@ A calendar management assistant plugin that integrates Google Calendar with Clau
 - Natural language event creation
 - Daily and weekly schedule views
 - Meeting scheduling with availability checking
+- Multi-participant availability checking across calendars
 - Timezone support for global teams
 - Video conferencing integration (Google Meet/Zoom)
 - Focus time blocking
