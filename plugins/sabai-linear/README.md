@@ -32,43 +32,30 @@ Product Manager assistant with Linear integration. Create tickets from templates
 
 ## Prerequisites
 
-- Linear API key with appropriate permissions
+- Linear account
 - Node.js 18+
 
 ### Setting up Linear MCP
 
-1. **Get your Linear API Key**
-   - Go to [Linear Settings → API → Personal API Keys](https://linear.app/settings/api)
-   - Create a new API key with read/write access
+This plugin uses [Linear's official MCP server](https://linear.app/docs/mcp), which handles authentication via OAuth.
 
-2. **Set the environment variable** (recommended for security):
-   ```bash
-   export LINEAR_API_KEY="lin_api_your_key_here"
-   ```
-
-   Or add to your shell profile (`~/.zshrc` or `~/.bashrc`):
-   ```bash
-   export LINEAR_API_KEY="lin_api_your_key_here"
-   ```
-
-3. **Add MCP configuration** to `.mcp.json` in your project root:
+1. **Add MCP configuration** to `.mcp.json` in your project root:
    ```json
    {
      "mcpServers": {
        "linear": {
          "command": "npx",
-         "args": ["-y", "@mseep/linear-mcp@latest"],
-         "env": {
-           "LINEAR_API_KEY": "${LINEAR_API_KEY}"
-         }
+         "args": ["-y", "mcp-remote", "https://mcp.linear.app/mcp"]
        }
      }
    }
    ```
 
-   > **Important:** Add `.mcp.json` to your `.gitignore` to avoid committing API keys. Use `${LINEAR_API_KEY}` to reference environment variables instead of hardcoding keys.
+2. **Restart Claude Code** to load the MCP server
 
-4. **Restart Claude Code** to load the MCP server
+3. **Authenticate** - On first use, you'll be prompted to authorize access to your Linear workspace via OAuth
+
+> **Note:** No API key needed! Linear's official MCP server uses OAuth 2.1 for secure authentication.
 
 ## Commands
 
