@@ -5,9 +5,9 @@
 | Field | Value |
 |-------|-------|
 | Type | Skills + Commands |
-| Version | 1.0.0 |
+| Version | 1.6.0 |
 | Status | Active |
-| Command | `/email`, `/reply`, `/inbox`, `/template` |
+| Command | `/email`, `/reply`, `/inbox`, `/template`, `/signature` |
 | Repo | `plugins/sabai-gmail` |
 
 ---
@@ -18,8 +18,10 @@ A Gmail assistant plugin for email composition, inbox management, templates, and
 
 ## Key Features
 
+- **Send emails** via Gmail MCP with recipient validation and error handling
 - Smart email drafts with appropriate tone
 - Contextual reply assistance based on email threads
+- **Signature management** - Multiple signatures for different contexts
 - 8 built-in email templates (intro, follow-up, thank-you, meeting-request, update, decline, referral, feedback)
 - Inbox triage and prioritization
 - Thread summarization
