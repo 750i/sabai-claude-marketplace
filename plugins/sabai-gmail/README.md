@@ -5,7 +5,7 @@
 | Field | Value |
 |-------|-------|
 | Type | Skills + Commands |
-| Version | 1.0.0 |
+| Version | 1.1.0 |
 | Status | Active |
 | Command | `/email`, `/reply`, `/inbox`, `/template` |
 | Repo | `plugins/sabai-gmail` |
@@ -45,7 +45,28 @@ A Gmail assistant plugin for email composition, inbox management, templates, and
 
 ## Configuration
 
-### MCP Server Setup
+### Connection Options
+
+There are two ways to connect Gmail with Claude:
+
+| Option | Scope | Best For |
+|--------|-------|----------|
+| **Claude Built-in Integration** | Account-wide (all devices) | Personal use, quick setup |
+| **Google Workspace MCP** | Per-device | Team/work accounts, multiple Google accounts |
+
+### Option 1: Claude Built-in Integration
+
+Use Claude's native Google integration:
+
+1. Go to **Claude Settings** → **Integrations**
+2. Connect your Google account
+3. Grant Gmail permissions
+
+**Note:** This connection applies to all devices using your Claude account.
+
+### Option 2: Google Workspace MCP (Recommended for Work)
+
+Use the Gmail MCP server for per-device control:
 
 ```json
 {
@@ -58,9 +79,37 @@ A Gmail assistant plugin for email composition, inbox management, templates, and
 }
 ```
 
+**Benefits:**
+- Connect different Google accounts on different devices
+- Work account on work machine, personal on personal
+- OAuth tokens stored locally per device
+- More granular control over permissions
+
+**Setup:**
+1. Add the MCP configuration to your Claude settings
+2. On first use, a browser window opens for Google OAuth
+3. Sign in with the Google account you want to use on this device
+4. Authorize the requested Gmail permissions
+
+### Using Multiple Google Accounts
+
+To use different accounts:
+
+1. **Work laptop**: Connect via MCP with work Google account
+2. **Personal device**: Connect via MCP with personal Google account
+3. **Shared device**: Use Claude built-in integration (switches with Claude account)
+
 ## Authentication
 
 OAuth via Google. Browser opens for sign-in on first use.
+
+### Re-authenticating
+
+If you need to switch accounts or re-authorize:
+
+1. Delete the OAuth token file (location shown in terminal on first auth)
+2. Restart Claude Code
+3. Re-authenticate with the new account
 
 ## Permissions
 
