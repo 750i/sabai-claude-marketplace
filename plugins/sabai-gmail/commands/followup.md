@@ -28,14 +28,22 @@ When invoked without a reference or with `--detect`:
    - Filter out newsletters, automated emails, already-replied threads
    - Score each email by urgency
 
-2. **Present results** sorted by urgency:
-   - Urgent (score 7+)
-   - Should reply soon (score 4-6)
-   - Can wait (score 1-3)
+2. **Present selection interface** using the email-selection skill:
+   - Display emails as numbered cards with urgency indicators
+   - Show: sender, subject, date, days waiting, snippet preview
+   - Sort by urgency (default) with option to re-sort
 
-3. **Ask user** which email to follow up on
+3. **Handle user selection**:
+   - Accept number input (1, 2, 3...)
+   - Accept natural language ("the one from Sarah", "the budget email")
+   - Support sorting: "sort by date", "sort by sender"
+   - Support filtering: "show urgent only", "show emails from John"
+   - Support dismissal: "dismiss 3", "skip"
+   - Support pagination: "more", "next page"
 
-4. **Proceed to draft** the follow-up email
+4. **Confirm selection** and fetch full email thread
+
+5. **Proceed to draft** the follow-up email
 
 ### Mode 2: Direct Follow-up
 
@@ -67,14 +75,32 @@ When invoked with a specific email reference:
 ## Examples
 
 ```
-/followup on the budget approval I sent last week
-/followup John about the project timeline
-/followup second reminder for the contract review
-/followup
+/followup                               # Detect and show selection interface
+/followup --days 3                      # Check last 3 days
+/followup --sort date                   # Sort by date instead of urgency
+/followup on the budget approval        # Direct follow-up on specific email
+/followup John about the project        # Follow up with specific person
+```
+
+### Selection Interaction Examples
+
+After running `/followup`, you can:
+
+```
+> 1                                     # Select email #1
+> the one from Sarah                    # Select by sender
+> sort by date                          # Re-sort the list
+> show urgent only                      # Filter to urgent emails
+> dismiss 3                             # Remove email #3 from list
+> more                                  # Show next page (if 10+ emails)
+> skip                                  # Exit without selecting
 ```
 
 ## Quick Flags
 
+- `--detect` - Run detection (default behavior)
+- `--days N` - Scan last N days (default: 7)
+- `--sort [urgency|date|sender]` - Initial sort order
 - `--first` - First follow-up (friendly reminder)
 - `--second` - Second follow-up (more direct)
 - `--final` - Final follow-up (closing the loop)
