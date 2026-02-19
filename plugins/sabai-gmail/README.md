@@ -5,20 +5,22 @@
 | Field | Value |
 |-------|-------|
 | Type | Skills + Commands |
-| Version | 1.0.0 |
+| Version | 1.4.0 |
 | Status | Active |
-| Command | `/email`, `/reply`, `/inbox`, `/template` |
+| Command | `/email`, `/reply`, `/inbox`, `/template`, `/followup` |
 | Repo | `plugins/sabai-gmail` |
 
 ---
 
 ## Overview
 
-A Gmail assistant plugin for email composition, inbox management, templates, and follow-up tracking. Features smart drafts with tone adjustment, contextual reply assistance, built-in email templates, email triage and prioritization, thread summarization, and multi-language support.
+A Gmail assistant plugin for email composition, inbox management, templates, and follow-up tracking. Features AI-powered smart draft generation, contextual reply assistance, built-in email templates, email triage and prioritization, thread summarization, and multi-language support.
 
 ## Key Features
 
-- Smart email drafts with appropriate tone
+- **Smart Draft Generation** - AI-powered contextual email replies that analyze thread history
+- **Automatic Tone Matching** - Detects and matches the sender's communication style
+- **Question/Request Detection** - Identifies and addresses all points in received emails
 - Contextual reply assistance based on email threads
 - 8 built-in email templates (intro, follow-up, thank-you, meeting-request, update, decline, referral, feedback)
 - Inbox triage and prioritization
