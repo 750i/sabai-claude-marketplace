@@ -14,17 +14,16 @@
 
 ## Overview
 
-A comprehensive Xero accounting plugin using the official [Xero MCP Server](https://github.com/XeroAPI/xero-mcp-server). Manage invoices, contacts, payments, and generate financial reports directly through Claude. Supports both sales invoices (ACCREC) and bills (ACCPAY), with full CRUD operations and financial reporting.
+A comprehensive Xero accounting plugin with PKCE authentication (free, no client secret required). Manage invoices, contacts, payments, and generate financial reports directly through Claude. Supports both sales invoices (ACCREC) and bills (ACCPAY), with full CRUD operations and financial reporting.
 
 ## Key Features
 
+- **PKCE Authentication** - Free OAuth flow, no paid Xero subscription required
 - Invoice management (create, view, update, void)
 - Contact/customer management
 - Payment recording and tracking
 - Financial reports (Profit & Loss, Balance Sheet, Trial Balance)
 - Multi-organization support
-- Payroll operations (NZ/UK regions)
-- Bank transaction management
 
 ## Use Cases
 
@@ -175,6 +174,6 @@ Required Claude Code permissions:
 
 - [README](https://github.com/sabaisystem/sabai-claude-marketplace/tree/main/plugins/sabai-xero)
 - [CHANGELOG](https://github.com/sabaisystem/sabai-claude-marketplace/tree/main/plugins/sabai-xero/CHANGELOG.md)
-- [Xero MCP Server](https://github.com/XeroAPI/xero-mcp-server)
 - [Xero Developer Portal](https://developer.xero.com/)
 - [Xero API Documentation](https://developer.xero.com/documentation/)
+- [PKCE OAuth Guide](https://developer.xero.com/documentation/guides/oauth2/pkce-flow)
