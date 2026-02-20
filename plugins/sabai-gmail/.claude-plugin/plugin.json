@@ -8,12 +8,12 @@
   "keywords": ["gmail", "email", "inbox", "google", "communication"],
   "mcpServers": {
     "gmail": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/gmail-mcp@latest"]
-    },
-    "google-calendar": {
-      "command": "npx",
-      "args": ["-y", "@anthropic/google-calendar-mcp@latest"]
+      "command": "bash",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/mcp/startup.sh"],
+      "env": {
+        "GOOGLE_CREDENTIALS": "${CLAUDE_PLUGIN_ROOT}/mcp/config/credentials.json",
+        "GOOGLE_TOKEN": "${CLAUDE_PLUGIN_ROOT}/mcp/config/token.json"
+      }
     }
   }
 }
