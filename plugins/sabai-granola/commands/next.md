@@ -41,3 +41,12 @@ Results are best-effort. These commitments are extracted from unstructured conve
 - Not every "let's meet" turns into an actual meeting
 
 Frame your output accordingly — present findings as "commitments mentioned in meetings" rather than as a definitive schedule.
+
+## Follow-up Actions
+
+After displaying future commitments, use `AskUserQuestion` to offer contextual next steps. Adapt options based on results. For example, if a follow-up with Acme was found:
+
+> "What would you like to do next?"
+> Options: "Get coached before the Acme follow-up", "Summarize the last Acme call", "Draft a follow-up email to Acme", "See all action items with Acme"
+
+Always tie the options to the specific companies, people, or meetings that appeared in the results.
