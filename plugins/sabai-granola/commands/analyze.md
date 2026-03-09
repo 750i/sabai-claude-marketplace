@@ -4,6 +4,8 @@ Analyze meetings using specialized frameworks tailored to the meeting type.
 
 ## Workflow
 
+0. **Login Check (Mandatory — Run First Every Chat).** **First command in this chat session** (no Granola call has been made yet in this conversation): inform the user ("Let me refresh your Granola connection to start this session."), then execute the `/sabai-granola:connect` flow to force a fresh login — even if already logged in. Do NOT proceed until authentication is confirmed. **Subsequent commands in the same chat** (a successful Granola call already happened earlier): call `list_meetings` with `time_range: "this_week"` as a quick auth check. If it succeeds → proceed. If it fails → re-run `/sabai-granola:connect`.
+
 1. **Identify the meeting.** Determine which meeting(s) to analyze from the user's request. If needed, use `list_meetings` to find the right one.
 
 2. **Detect the meeting type.** Based on the meeting title, attendees, and content, classify the meeting as one of:
