@@ -13,6 +13,8 @@ Use the `list_meetings` MCP tool to retrieve meetings within a time range. The t
 
 ## Workflow
 
+0. **Login Check (Mandatory — Run First Every Chat).** **First command in this chat session** (no Granola call has been made yet in this conversation): inform the user ("Let me refresh your Granola connection to start this session."), then execute the `/sabai-granola:connect` flow to force a fresh login — even if already logged in. Do NOT proceed until authentication is confirmed. **Subsequent commands in the same chat** (a successful Granola call already happened earlier): call `list_meetings` with `time_range: "this_week"` as a quick auth check. If it succeeds → proceed. If it fails → re-run `/sabai-granola:connect`.
+
 1. **Determine the time range** from the user's request. If they say "this week", use `this_week`. If they say "last week", use `last_week`. If they give specific dates, use `custom`. If ambiguous, default to `this_week` and mention you can look further back if needed.
 
 2. **Call `list_meetings`** with the appropriate `time_range` (and `custom_start`/`custom_end` if custom).
